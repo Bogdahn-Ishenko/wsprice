@@ -1,4 +1,4 @@
-const API_URL = 'http://api.favorit-parts.ru/hs/hsprice/';
+const API_URL = 'https://api.favorit-parts.ru/hs/hsprice/';
 
 export async function searchParts({ key, number, brand, signal }) {
   const params = new URLSearchParams({ key, number });

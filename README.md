@@ -7,7 +7,7 @@
 - React
 - Redux Toolkit и React Redux
 - Vite
-- Favorit Parts API (`http://api.favorit-parts.ru/hs/hsprice/`)
+- Favorit Parts API (`https://api.favorit-parts.ru/hs/hsprice/`)
 
 Пример ключа API: `00000000-0000-0000-0000-000000000001`
 

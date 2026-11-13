@@ -14,6 +14,7 @@ test('brand lookup sends key and article without analogue flag', async () => {
 
   try {
     const goods = await searchParts({ key: 'secret & key', number: '71 # 605' });
+    assert.equal(requestedUrl.protocol, 'https:');
     assert.equal(requestedUrl.searchParams.get('key'), 'secret & key');
     assert.equal(requestedUrl.searchParams.get('number'), '71 # 605');
     assert.equal(requestedUrl.searchParams.has('brand'), false);
