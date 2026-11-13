@@ -25,7 +25,11 @@ body {
 
 button, input { font: inherit; }
 
-.page-shell { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+.page-shell {
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding-bottom: 64px;
+}
 
 .topbar {
   height: 64px;
@@ -205,10 +209,23 @@ h2 { margin: 0; color: #202722; font-size: 24px; line-height: 32px; }
 .offer-details strong { color: var(--secondary); font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums; }
 .offer-details .offer-price { color: var(--green-dark); font-size: 16px; font-weight: 600; }
 
-.footer { padding: 16px 0 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+.footer {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 50%;
+  width: min(1120px, calc(100vw - 48px));
+  padding: 16px 0 24px;
+  transform: translateX(-50%);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  background: #f7f8f6;
+  font-size: 12px;
+}
 
 @media (max-width: 760px) {
   .page-shell { width: min(100% - 32px, 560px); }
+  .footer { width: min(560px, calc(100vw - 32px)); }
   .hero { grid-template-columns: 1fr; gap: 24px; padding: 40px 0; }
   h1 { font-size: 38px; }
   .search-panel { padding: 20px; }
